@@ -33,24 +33,28 @@ async function run() {
 
 async function getRemainingData(page) {
   return await page.evaluate(() => {
-    return document.querySelector("#totalOctets").innerText;
+    return getValue("#totalOctets");
   });
 }
 
 async function getUsedData(page) {
   return await page.evaluate(() => {
-    return document.querySelector("#totalOctet").innerText;
+    return getValue("#totalOctet");
   });
 }
 
 async function getTotalData(page) {
   return await page.evaluate(() => {
-    return document.querySelector("#totalOc").innerText;
+    return getValue("#totalOc");
   });
 }
 
 function toGB(mb) {
   return (mb / 1024).toFixed(2);
+}
+
+function getValue(id){
+  return document.querySelector(id).innerText;
 }
 
 run();
