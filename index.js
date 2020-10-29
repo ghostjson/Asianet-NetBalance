@@ -27,7 +27,7 @@ async function run() {
   console.log(`Total: ${toGB(total)}GB`);
   console.log(`Used: ${toGB(used)}GB`);
   console.log(`Remaining: ${toGB(remaining)}GB`);
-
+  console.log("action completed....");
   await browser.close();
 }
 
