@@ -23,7 +23,7 @@ async function run() {
   const remaining = await getRemainingData(usage_page);
   const used = await getUsedData(usage_page);
   const total = await getTotalData(usage_page);
-
+  console.log("action called....");
   console.log(`Total: ${toGB(total)}GB`);
   console.log(`Used: ${toGB(used)}GB`);
   console.log(`Remaining: ${toGB(remaining)}GB`);
